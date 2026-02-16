@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# My-ToDo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Currently, two official plugins are available:
+![Project Banner](public/screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A streamlined task manager designed for daily productivity. Built with a focus on performance, clean UI, and persistent client-side storage.
 
-## React Compiler
+## Live Demo
+👉 **[Open My-ToDo App](https://dzaidun.github.io/My-ToDo/)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
+- **Task Management:** Seamlessly add, edit, and remove daily tasks.
+- **Visual Feedback:** Interactive UI with strikethrough styles for completed items.
+- **Progress Tracking:** Real-time progress bar displaying completion percentage.
+- **Motivation System:** Dynamic quotes that adapt based on your productivity level.
+- **Data Persistence:** Autosaves to LocalStorage — your tasks remain safe after page reloads.
+- **Responsive Design:** Optimized layout for both mobile devices and desktops.
+- **Localization:** Built-in support for English and Ukrainian languages.
 
-## Expanding the ESLint configuration
+## Tech Stack
+- **React** — Built with Functional Components and Custom Hooks.
+- **TypeScript** — Ensures type safety and improves maintainability.
+- **Vite** — Next-generation frontend tooling for instant HMR.
+- **Tailwind CSS** — Utility-first framework for rapid and modern styling.
+- **GitHub Pages** — Automated deployment and hosting.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Local Setup
+To run the project locally, follow these steps:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Clone the repository
+git clone https://github.com/dzaidun/My-ToDo.git
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Navigate to the project directory
+cd My-ToDo
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The app will be available at `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Author
+**Denys Zaidun**
+- GitHub: [dzaidun](https://github.com/dzaidun)
